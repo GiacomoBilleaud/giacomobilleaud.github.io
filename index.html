@@ -3,46 +3,48 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Giacomo Billeaud | Portfolio - ISDS 3107</title>
+    <!-- Foundation CSS Framework -->
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <style>
-      h5
-      {
-        text-align: center;
-        color: #333;
-      }
-      button
-      {
-        background-color: #0800ff;
-        color: #fff;
-        width: 130px;
-        height: 40px;
-        border-radius: 5px;
-        font-weight: bold;
-      }
-      li
-      {
-        margin-left: 15px;
-      }
-    </style>
+    <!-- Unified Custom Stylesheet -->
+    <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
     <div class="off-canvas-wrapper">
       <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-        <div class="off-canvas position-left reveal-for-large" id="my-info" data-off-canvas data-position="left">
-          <div class="row column">
-            <br>
-            <img class="thumbnail" src="./pfp.jpeg" style="border-color: skyblue;">
-            <h5>Giacomo Billeaud</h5>
-            <p>
+        
+        <!-- Off-canvas Sidebar for Desktop & Mobile -->
+        <aside class="off-canvas position-left reveal-for-large" id="my-info" data-off-canvas data-position="left">
+          <div class="off-canvas-sidebar-inner">
+            <img class="thumbnail sidebar-profile-img" src="./pfp.jpeg" alt="Giacomo Billeaud Profile Photo">
+            <h5 class="sidebar-name">Giacomo Billeaud</h5>
+            <p class="sidebar-tagline">LSU Information Systems &amp; Analytics<br>Web Developer &bull; Mobile App Creator &bull; Data Analyst</p>
+
+            <nav aria-label="Sidebar Navigation">
+              <div class="sidebar-nav-title">Navigation</div>
+              <ul class="sidebar-nav-menu">
+                <li><a href="index.html" class="active"><span class="nav-icon">&#127968;</span> Home</a></li>
+                <li><a href="resume.html"><span class="nav-icon">&#128196;</span> Resume</a></li>
+                <li><a href="project.html"><span class="nav-icon">&#128640;</span> Featured Project</a></li>
+                <li><a href="#contact"><span class="nav-icon">&#128231;</span> Contact</a></li>
+              </ul>
+            </nav>
+
+            <hr class="sidebar-divider">
+
+            <div class="sidebar-nav-title">About Me</div>
+            <p class="sidebar-bio">
               I am from Lafayette, Louisiana.
               I went to Catholic High School and graduated in 2024.
               I went to Baton Rouge Community College and graduated in 2026 with an Associate of Business.
-              I went to Louisiana State University and plan to graduate in May of 2028 with a Bachelor in Information System and Analytics.
-              I have experence in web development, data analytics, and mobile app development. 
+              I attend Louisiana State University and plan to graduate in May of 2028 with a Bachelor in Information Systems and Analytics.
+              I have experience in web development, data analytics, and mobile app development.
             </p>
-            <p style="margin-left: -15px">________________________________</p>
-            <p>My skills include:</p>
+
+            <hr class="sidebar-divider">
+
+            <div class="sidebar-nav-title">Core Skills</div>
+            <ul class="sidebar-skills-list">
               <li>Tableau</li>
               <li>Excel</li>
               <li>SQL</li>
@@ -54,153 +56,447 @@
               <li>Sales Analysis</li>
               <li>Business Analysis</li>
               <li>Responsive Web Design</li>
-              <li>IOS App Publishing</li>
+              <li>iOS App Publishing</li>
               <li>E-Commerce Analytics</li>
-          </div>
-        </div>
-        <div class="off-canvas-content" data-off-canvas-content>
-          <div class="title-bar hide-for-large">
-            <div class="title-bar-left">
-              <button class="menu-icon" type="button" data-open="my-info"></button>
-              <span class="title-bar-title">Giacomo Billeaud</span>
+            </ul>
+
+            <hr class="sidebar-divider">
+
+            <div class="sidebar-nav-title">Profiles</div>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+              <a href="https://apps.apple.com/us/developer/giacomo-billeaud/id1831131273" target="_blank" class="button hollow small expanded" style="margin-bottom: 0;">Apple App Store</a>
+              <a href="https://www.linkedin.com/in/giacomo-billeaud-4372a42a5/" target="_blank" class="button hollow small expanded" style="margin-bottom: 0;">LinkedIn</a>
+              <a href="https://app.joinhandshake.com/profiles/m4nyws" target="_blank" class="button hollow small expanded" style="margin-bottom: 0;">Handshake</a>
             </div>
           </div>
-          <div class="callout primary">
+        </aside>
+
+        <!-- Main Page Content Area -->
+        <div class="off-canvas-content" data-off-canvas-content>
+          
+          <!-- Mobile Title Bar Header -->
+          <div class="title-bar hide-for-large">
+            <div class="title-bar-left">
+              <button class="menu-icon" type="button" data-open="my-info" aria-label="Open Navigation Menu"></button>
+              <span class="title-bar-title" style="margin-left: 8px; font-weight: 700;">Giacomo Billeaud</span>
+            </div>
+            <div class="title-bar-right">
+              <a href="resume.html" style="color: #fff; font-size: 0.85rem; margin-right: 10px; font-weight: 600;">Resume</a>
+              <a href="project.html" style="color: #fff; font-size: 0.85rem; font-weight: 600;">Project</a>
+            </div>
+          </div>
+
+          <!-- Sticky Top Bar for Large Screens -->
+          <header class="site-top-bar show-for-large">
+            <a href="index.html" class="site-brand">
+              <strong>Giacomo Billeaud</strong>
+              <span class="badge-course">ISDS 3107 Portfolio</span>
+            </a>
+            <nav aria-label="Primary Navigation">
+              <ul class="top-nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="project.html">Featured Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+          </header>
+
+          <!-- Hero Callout Banner -->
+          <section class="callout primary">
             <div class="row column">
               <h1>Hello! This is the portfolio from the past 3+ years.</h1>
               <p class="lead">These are the projects I have worked on and the certificates I have earned for the past three plus years.</p>
-            </div>
-          </div>
-          <div class="row small-up-2 medium-up-3 large-up-4">
-            <div class="column">
-              <a href="https://www.advendtechbatonrouge.com" target="_blank">
-                <img class="thumbnail" src="./abr.png">
-                <h5>Advendtech Baton Rouge Website</h5>
-              </a>
-            </div>
-            <div class="column">
-              <a href="https://apps.apple.com/us/app/advendtech/id6749554367" target="_blank">
-                <img class="thumbnail" src="./abr.png">
-                <h5>Advendtech Baton Rouge App</h5>
-              </a>
-            </div>
-            <div class="column">
-              <a href="https://apps.apple.com/us/app/late-night-notes/id6755598367" target="_blank">
-                <img class="thumbnail" src="./lnn.png">
-                <h5>Late Night Notes App</h5>
-              </a>
-            </div>
-            <div class="column">
-              <a href="./HTML_for_Web_Design.png" target="_blank">
-                <img class="thumbnail" src="./HTML_for_Web_Design.png">
-                <h5>HTML For Web Design Certificate</h5>
-              </a>
-            </div>
-            <div class="column">
-              <a href="./Introduction_to_Web_Design.png" target="_blank">
-                <img class="thumbnail" src="./Introduction_to_Web_Design.png">
-                <h5>Introduction to Web Design Certificate</h5>
-              </a>
-            </div>
-            <div class="column">
-              <a href="https://coursera.org/verify/C2XLHKMNVKK4" target="_blank">
-                <img class="thumbnail" src="./1.png">
-                <h5>Foundations: Data, Data, Everywhere Certificate</h5>
-              </a>
-            </div>
-            <div class="column">
-              <a href="https://coursera.org/verify/KKQ619MNP35D" target="_blank">
-                <img class="thumbnail" src="./2.png">
-                <h5>Ask Questions to make Data-Driven Decisions Certificate</h5>
-              </a>
-            </div>
-            <div class="column">
-              <a href="https://coursera.org/verify/ZEZJB92GAJWX" target="_blank">
-                <img class="thumbnail" src="./3.png">
-                <h5>Prepare Data for Exploration Certificate</h5>
-              </a>
-            </div>
-            <div class="column">
-              <a href="https://coursera.org/verify/Z71B78S49EY2" target="_blank">
-                <img class="thumbnail" src="./4.png">
-                <h5>Process Data from Dirty to Clean Certificate</h5>
-              </a>
-            </div>
-            <div class="column">
-              <a href="https://coursera.org/verify/RRLG62IIDLXD" target="_blank">
-                <img class="thumbnail" src="./5.png">
-                <h5>Analyze Data to Answer Questions Certificate</h5>
-              </a>
-            </div>
-            <div class="column">
-              <a href="https://coursera.org/verify/4PXBO59W47MO" target="_blank">
-                <img class="thumbnail" src="./6.png">
-                <h5>Share Data Through the Art of Visualization Certificate</h5>
-              </a>
-            </div>
-            <div class="column">
-              <a href="https://coursera.org/verify/00S9AN7HH88J" target="_blank">
-                <img class="thumbnail" src="./7.png">
-                <h5>Introduction to Data Analysis using Python Certificate</h5>
-              </a>
-            </div>
-            <div class="column">
-              <a href="https://coursera.org/verify/3G6EJHU1QKJO" target="_blank">
-                <img class="thumbnail" src="./8.png">
-                <h5>Google Data Analytics Capstone Certificate</h5>
-              </a>
-            </div>
-            <div class="column">
-              <a href="https://coursera.org/verify/T3JPVLS6A8UJ" target="_blank">
-                <img class="thumbnail" src="./9.png">
-                <h5>AI Job Search Certificate</h5>
-              </a>
-            </div>
-            <div class="column">
-              <button style="width: 270px; color: white; height: 57px;">
-                <a href="./EbayBestSellingItems.pptx" target="_blank">
-                  <h5 style="color: white; font-weight: bold; margin:auto;">Tableau PowerPoint 1 <br> (For Advendtech)</h5>
-                </a>
-              </button>
-            </div>
-            <div class="column">
-              <button style="width: 270px; color: white; height: 57px;">
-                <a href="./EbayHighestearingproducts.pptx" target="_blank">
-                  <h5 style="color: white; font-weight: bold; margin:auto;">Tableau PowerPoint 2 <br> (For Advendtech)</h5>
-                </a>
-              </button>
-            </div>
-          </div>
-          <hr>
-          <div class="row">
-            <div class="medium-6 columns">
-              <h3>Contact Me</h3>
-              <p>Heres my App Store link, Instagram, LinkedIn, and Handshake profiles</p>
-              <ul class="menu">
-                <li><a href="https://apps.apple.com/us/developer/giacomo-billeaud/id1831131273" target="_blank"><button>App Store Link</button></a></li>
-                <!--<li><a href="https://www.instagram.com/mo_billeaud/" target="_blank">Instagram</a></li> -->
-                <li><a href="https://www.linkedin.com/in/giacomo-billeaud-4372a42a5/" target="_blank"><button>LinkedIn</button></a></li>
-                <li><a href="https://app.joinhandshake.com/profiles/m4nyws" target="_blank"><button>Handshake</button></a></li>
-              </ul>
-            </div>
-            <form action="mailto: meauxbo2@gmail.com" method="POST" enctype="text/plain">
-              <div class="medium-6 columns">
-                <label>Name
-                  <input type="text" placeholder="Name">
-                </label>
-                <label>Email
-                  <input type="text" placeholder="Email">
-                </label>
-                <label>Message
-                  <textarea placeholder="Hello Giacomo Billeaud"></textarea>
-                </label>
-                <input type="submit" class="button expanded" value="Submit">
+              <div style="margin-top: 1.25rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <a href="project.html" class="btn-primary" style="background-color: #ffffff; color: #0800ff !important;">View Featured Project &rarr;</a>
+                <a href="resume.html" class="btn-secondary" style="border-color: #ffffff; color: #ffffff !important; background: transparent;">View Full Resume</a>
               </div>
-            </form>
-          </div>
+            </div>
+          </section>
+
+          <!-- Main Body Container -->
+          <main class="main-content-section">
+
+            <!-- SECTION 1: PROFILE / ABOUT -->
+            <section id="about" class="profile-overview-card">
+              <div class="section-header">
+                <h2 class="section-title"><span>&#128100;</span> Profile &amp; About Me</h2>
+                <a href="resume.html" class="button small hollow" style="margin-bottom: 0;">See Full Academic History &rarr;</a>
+              </div>
+              <div class="row">
+                <div class="medium-7 columns">
+                  <h4 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: #0f172a;">Welcome to My Professional e-Portfolio</h4>
+                  <p>
+                    I am an Information Systems and Analytics student from Lafayette, Louisiana, currently pursuing my Bachelor of Science degree at Louisiana State University.
+                    My academic journey and personal initiative have centered on solving business problems through technology &mdash; spanning responsive web engineering, native iOS application publishing, and data analytics.
+                  </p>
+                  <p>
+                    Over the past 3+ years, I have engineered commercial websites, published two apps live on the Apple App Store, completed extensive data analytics curricula with Google and Coursera, and performed business intelligence sales analysis for real-world operations.
+                  </p>
+                </div>
+                <div class="medium-5 columns">
+                  <div class="row small-up-1 medium-up-1">
+                    <div class="column" style="margin-bottom: 0.75rem;">
+                      <div class="profile-stat-box">
+                        <div class="stat-icon">&#127891;</div>
+                        <div class="stat-title">Education Pathway</div>
+                        <div class="stat-desc">LSU B.S. ISA ('28) &bull; BRCC A.B. ('26) &bull; Catholic High ('24)</div>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="profile-stat-box">
+                        <div class="stat-icon">&#128187;</div>
+                        <div class="stat-title">Core Disciplines</div>
+                        <div class="stat-desc">Web Development &bull; Mobile Engineering &bull; Business Analytics</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- SECTION 2: SKILLS -->
+            <section id="skills" class="skills-container">
+              <div class="section-header">
+                <h2 class="section-title"><span>&#9881;</span> Core Competencies &amp; Skills</h2>
+              </div>
+              <p style="color: #475569; margin-bottom: 1.25rem;">
+                A comprehensive blend of technical programming tools, data visualization software, database query languages, and business analysis methodologies:
+              </p>
+              
+              <div class="row">
+                <div class="medium-6 columns" style="margin-bottom: 1.25rem;">
+                  <h5 style="text-align: left; color: #0800ff; margin-bottom: 0.5rem;">Data Analytics &amp; Business Intelligence</h5>
+                  <div class="skill-tags-group">
+                    <span class="skill-tag">&#128202; Tableau</span>
+                    <span class="skill-tag">&#128200; Microsoft Excel</span>
+                    <span class="skill-tag">&#128450; SQL</span>
+                    <span class="skill-tag">&#128013; Python</span>
+                    <span class="skill-tag">&#127912; Data Visualization</span>
+                    <span class="skill-tag">&#129529; Data Cleaning</span>
+                    <span class="skill-tag">&#128176; Sales Analysis</span>
+                    <span class="skill-tag">&#128203; Business Analysis</span>
+                    <span class="skill-tag">&#128722; E-Commerce Analytics</span>
+                  </div>
+                </div>
+                
+                <div class="medium-6 columns" style="margin-bottom: 1.25rem;">
+                  <h5 style="text-align: left; color: #0800ff; margin-bottom: 0.5rem;">Web &amp; Mobile Development</h5>
+                  <div class="skill-tags-group">
+                    <span class="skill-tag">&#128196; HTML5</span>
+                    <span class="skill-tag">&#127912; CSS3</span>
+                    <span class="skill-tag">&#128241; Responsive Web Design</span>
+                    <span class="skill-tag">&#63743; iOS App Publishing</span>
+                    <span class="skill-tag">&#128187; Foundation Framework</span>
+                    <span class="skill-tag">&#128269; Systems Analysis (ISDS)</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- SECTION 3: EXPERIENCE & PROJECTS -->
+            <section id="experience">
+              
+              <!-- Featured Project Spotlight Banner -->
+              <div class="featured-project-callout">
+                <div class="row align-middle">
+                  <div class="medium-8 columns">
+                    <span class="featured-project-badge">Featured Course Project &bull; ISDS 3107</span>
+                    <h3 style="margin-bottom: 0.5rem; color: #0f172a;">Advendtech Baton Rouge: Web, Mobile &amp; Analytics Solution</h3>
+                    <p style="color: #334155; margin-bottom: 1rem;">
+                      An end-to-end information systems solution comprising a live commercial website, a published iOS mobile application, and executive Tableau sales intelligence dashboards.
+                    </p>
+                    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                      <a href="project.html" class="button btn-primary" style="margin-bottom: 0;">Explore Dedicated Project Page &rarr;</a>
+                      <a href="https://www.advendtechbatonrouge.com" target="_blank" class="button hollow" style="margin-bottom: 0;">Visit Website</a>
+                      <a href="https://apps.apple.com/us/app/advendtech/id6749554367" target="_blank" class="button hollow" style="margin-bottom: 0;">App Store</a>
+                    </div>
+                  </div>
+                  <div class="medium-4 columns text-center hide-for-small-only">
+                    <img src="./abr.png" alt="Advendtech Baton Rouge Preview" style="max-height: 140px; border-radius: 8px; border: 1px solid #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Projects, Applications & Analytics Grid -->
+              <div class="section-header">
+                <h2 class="section-title"><span>&#128187;</span> Real-World Projects &amp; Applications</h2>
+                <span style="font-size: 0.9rem; color: #64748b;">Live websites, published apps, and business analytics</span>
+              </div>
+
+              <div class="row small-up-1 medium-up-2 large-up-3" data-equalizer>
+                <!-- Project 1: Advendtech Website -->
+                <div class="column">
+                  <div class="portfolio-card">
+                    <a href="https://www.advendtechbatonrouge.com" target="_blank">
+                      <img class="thumbnail" src="./abr.png" alt="Advendtech Baton Rouge Website">
+                      <h5>Advendtech Baton Rouge Website</h5>
+                      <div class="card-meta">Live Commercial Website &bull; Responsive Design</div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Project 2: Advendtech iOS App -->
+                <div class="column">
+                  <div class="portfolio-card">
+                    <a href="https://apps.apple.com/us/app/advendtech/id6749554367" target="_blank">
+                      <img class="thumbnail" src="./abr.png" alt="Advendtech Baton Rouge iOS App">
+                      <h5>Advendtech Baton Rouge App</h5>
+                      <div class="card-meta">Apple App Store &bull; Mobile Application</div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Project 3: Late Night Notes iOS App -->
+                <div class="column">
+                  <div class="portfolio-card">
+                    <a href="https://apps.apple.com/us/app/late-night-notes/id6755598367" target="_blank">
+                      <img class="thumbnail" src="./lnn.png" alt="Late Night Notes App">
+                      <h5>Late Night Notes App</h5>
+                      <div class="card-meta">Apple App Store &bull; Native iOS App</div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Presentation 1: Tableau Best Selling -->
+                <div class="column">
+                  <div class="portfolio-card" style="justify-content: center; align-items: center; padding: 1.5rem 1rem;">
+                    <a href="./EbayBestSellingItems.pptx" target="_blank" class="ppt-card-button" download>
+                      <h5>Tableau PowerPoint 1<br><span style="font-size: 0.8rem; font-weight: normal; opacity: 0.9;">Best Selling Items (Advendtech)</span></h5>
+                    </a>
+                    <div class="card-meta" style="margin-top: 0.75rem;">Download / View PowerPoint Presentation</div>
+                  </div>
+                </div>
+
+                <!-- Presentation 2: Tableau Highest Earning -->
+                <div class="column">
+                  <div class="portfolio-card" style="justify-content: center; align-items: center; padding: 1.5rem 1rem;">
+                    <a href="./EbayHighestearingproducts.pptx" target="_blank" class="ppt-card-button" download>
+                      <h5>Tableau PowerPoint 2<br><span style="font-size: 0.8rem; font-weight: normal; opacity: 0.9;">Highest Earning Products (Advendtech)</span></h5>
+                    </a>
+                    <div class="card-meta" style="margin-top: 0.75rem;">Download / View PowerPoint Presentation</div>
+                  </div>
+                </div>
+
+                <!-- Dedicated Link to Project Deep Dive -->
+                <div class="column">
+                  <div class="portfolio-card" style="justify-content: center; align-items: center; text-align: center; background: #eff6ff; border: 2px dashed #93c5fd;">
+                    <a href="project.html" style="justify-content: center; align-items: center;">
+                      <span style="font-size: 2.2rem; margin-bottom: 0.5rem;">&#128218;</span>
+                      <h5 style="color: #0800ff;">Read Project Case Study</h5>
+                      <p style="font-size: 0.85rem; color: #475569; margin: 0.5rem 0 0 0;">In-depth systems lifecycle review, architecture, and results.</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Certifications Section Grid -->
+              <div class="section-header" style="margin-top: 2rem;">
+                <h2 class="section-title"><span>&#128220;</span> Professional Certifications</h2>
+                <span style="font-size: 0.9rem; color: #64748b;">Verified credentials in Web Design &amp; Google Data Analytics</span>
+              </div>
+
+              <div class="row small-up-2 medium-up-3 large-up-4">
+                
+                <!-- Web Design 1 -->
+                <div class="column">
+                  <div class="portfolio-card">
+                    <a href="./HTML_for_Web_Design.png" target="_blank">
+                      <img class="thumbnail" src="./HTML_for_Web_Design.png" alt="HTML For Web Design Certificate">
+                      <h5>HTML For Web Design</h5>
+                      <div class="card-meta">Web Design Credential</div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Web Design 2 -->
+                <div class="column">
+                  <div class="portfolio-card">
+                    <a href="./Introduction_to_Web_Design.png" target="_blank">
+                      <img class="thumbnail" src="./Introduction_to_Web_Design.png" alt="Introduction to Web Design Certificate">
+                      <h5>Intro to Web Design</h5>
+                      <div class="card-meta">Web Design Credential</div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Web Design 3: Free Code Camp -->
+                <div class="column">
+                  <div class="portfolio-card">
+                    <a href="https://www.freecodecamp.org/certification/giacomobilleaud/responsive-web-design" target="_blank">
+                      <img class="thumbnail" src="./freecodecamp.png" alt="Free Code Camp Responsive Web Design Certificate">
+                      <h5>FreeCodeCamp Responsive Web Design</h5>
+                      <div class="card-meta">Verified Certification</div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Coursera 1 -->
+                <div class="column">
+                  <div class="portfolio-card">
+                    <a href="https://coursera.org/verify/C2XLHKMNVKK4" target="_blank">
+                      <img class="thumbnail" src="./1.png" alt="Foundations: Data, Data, Everywhere Certificate">
+                      <h5>Foundations: Data Everywhere</h5>
+                      <div class="card-meta">Google Data Analytics</div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Coursera 2 -->
+                <div class="column">
+                  <div class="portfolio-card">
+                    <a href="https://coursera.org/verify/KKQ619MNP35D" target="_blank">
+                      <img class="thumbnail" src="./2.png" alt="Ask Questions to make Data-Driven Decisions Certificate">
+                      <h5>Data-Driven Decisions</h5>
+                      <div class="card-meta">Google Data Analytics</div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Coursera 3 -->
+                <div class="column">
+                  <div class="portfolio-card">
+                    <a href="https://coursera.org/verify/ZEZJB92GAJWX" target="_blank">
+                      <img class="thumbnail" src="./3.png" alt="Prepare Data for Exploration Certificate">
+                      <h5>Prepare Data for Exploration</h5>
+                      <div class="card-meta">Google Data Analytics</div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Coursera 4 -->
+                <div class="column">
+                  <div class="portfolio-card">
+                    <a href="https://coursera.org/verify/Z71B78S49EY2" target="_blank">
+                      <img class="thumbnail" src="./4.png" alt="Process Data from Dirty to Clean Certificate">
+                      <h5>Process Data: Dirty to Clean</h5>
+                      <div class="card-meta">Google Data Analytics</div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Coursera 5 -->
+                <div class="column">
+                  <div class="portfolio-card">
+                    <a href="https://coursera.org/verify/RRLG62IIDLXD" target="_blank">
+                      <img class="thumbnail" src="./5.png" alt="Analyze Data to Answer Questions Certificate">
+                      <h5>Analyze Data to Answer Questions</h5>
+                      <div class="card-meta">Google Data Analytics</div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Coursera 6 -->
+                <div class="column">
+                  <div class="portfolio-card">
+                    <a href="https://coursera.org/verify/4PXBO59W47MO" target="_blank">
+                      <img class="thumbnail" src="./6.png" alt="Share Data Through the Art of Visualization Certificate">
+                      <h5>Art of Visualization</h5>
+                      <div class="card-meta">Google Data Analytics</div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Coursera 7 -->
+                <div class="column">
+                  <div class="portfolio-card">
+                    <a href="https://coursera.org/verify/00S9AN7HH88J" target="_blank">
+                      <img class="thumbnail" src="./7.png" alt="Introduction to Data Analysis using Python Certificate">
+                      <h5>Data Analysis using Python</h5>
+                      <div class="card-meta">Google Data Analytics</div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Coursera 8 -->
+                <div class="column">
+                  <div class="portfolio-card">
+                    <a href="https://coursera.org/verify/3G6EJHU1QKJO" target="_blank">
+                      <img class="thumbnail" src="./8.png" alt="Google Data Analytics Capstone Certificate">
+                      <h5>Data Analytics Capstone</h5>
+                      <div class="card-meta">Google Data Analytics</div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Coursera 9 -->
+                <div class="column">
+                  <div class="portfolio-card">
+                    <a href="https://coursera.org/verify/T3JPVLS6A8UJ" target="_blank">
+                      <img class="thumbnail" src="./9.png" alt="AI Job Search Certificate">
+                      <h5>AI Job Search</h5>
+                      <div class="card-meta">Professional Certificate</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- SECTION 4: CONTACT -->
+            <section id="contact" class="contact-section-container">
+              <div class="section-header">
+                <h2 class="section-title"><span>&#9993;</span> Contact Me</h2>
+                <span style="font-size: 0.9rem; color: #64748b;">Let's connect for academic or professional opportunities</span>
+              </div>
+              <div class="row">
+                <div class="medium-6 columns" style="margin-bottom: 1.5rem;">
+                  <h4 style="font-size: 1.2rem; color: #0f172a; margin-bottom: 0.5rem;">Direct Profiles &amp; Networks</h4>
+                  <p style="color: #475569; font-size: 0.95rem;">
+                    Here are my App Store developer link, LinkedIn, and Handshake profiles. Feel free to connect or review my published apps.
+                  </p>
+                  
+                  <div class="contact-button-list">
+                    <a href="https://apps.apple.com/us/developer/giacomo-billeaud/id1831131273" target="_blank" rel="noopener">
+                      <button type="button">&#63743; App Store Link</button>
+                    </a>
+                    <a href="https://www.linkedin.com/in/giacomo-billeaud-4372a42a5/" target="_blank" rel="noopener">
+                      <button type="button">&#128279; LinkedIn Profile</button>
+                    </a>
+                    <a href="https://app.joinhandshake.com/profiles/m4nyws" target="_blank" rel="noopener">
+                      <button type="button">&#129309; Handshake Profile</button>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="medium-6 columns">
+                  <h4 style="font-size: 1.2rem; color: #0f172a; margin-bottom: 0.5rem;">Send a Message</h4>
+                  <form action="mailto:meauxbo2@gmail.com" method="POST" enctype="text/plain">
+                    <label>Your Name
+                      <input type="text" name="Name" placeholder="e.g. John Doe" required>
+                    </label>
+                    <label>Your Email
+                      <input type="email" name="Email" placeholder="e.g. jdoe@example.com" required>
+                    </label>
+                    <label>Your Message
+                      <textarea name="Message" rows="4" placeholder="Hello Giacomo Billeaud..." required></textarea>
+                    </label>
+                    <input type="submit" class="button expanded btn-primary" value="Submit Message">
+                  </form>
+                </div>
+              </div>
+            </section>
+
+          </main>
+
+          <!-- Footer -->
+          <footer class="site-footer">
+            <div class="footer-nav">
+              <a href="index.html">Home</a> &bull;
+              <a href="resume.html">Resume</a> &bull;
+              <a href="project.html">Featured Project</a> &bull;
+              <a href="#about">About</a> &bull;
+              <a href="#skills">Skills</a> &bull;
+              <a href="#experience">Experience</a> &bull;
+              <a href="#contact">Contact</a>
+            </div>
+            <p style="margin: 0;">&copy; 2024&ndash;2026 Giacomo Billeaud. Portfolio built for ISDS 3107: Design of Information Systems Solutions.</p>
+          </footer>
+
         </div>
       </div>
     </div>
+
+    <!-- Scripts: Foundation & jQuery -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script>
